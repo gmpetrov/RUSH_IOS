@@ -102,23 +102,26 @@
                                             <action selector="mapTypeSegmentPressed:" destination="8rJ-Kc-sve" eventType="valueChanged" id="eKX-wh-0Hk"/>
                                         </connections>
                                     </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWk-Wn-679">
+                                        <rect key="frame" x="70" y="17" width="80" height="30"/>
+                                        <state key="normal" title="Find Me">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mapFindMePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Iam-zS-IAd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="NiV-1V-79U" secondAttribute="bottom" constant="12" id="4Pp-yq-3w3"/>
+                                    <constraint firstItem="nWk-Wn-679" firstAttribute="leading" secondItem="pl5-F2-zba" secondAttribute="leading" constant="20" id="Gk4-nz-1Re"/>
                                     <constraint firstAttribute="trailing" secondItem="NiV-1V-79U" secondAttribute="trailing" constant="240" id="Hvb-mF-aZz"/>
+                                    <constraint firstItem="nWk-Wn-679" firstAttribute="top" secondItem="pl5-F2-zba" secondAttribute="top" constant="12" id="LWI-UP-RbP"/>
                                     <constraint firstItem="NiV-1V-79U" firstAttribute="top" secondItem="pl5-F2-zba" secondAttribute="top" constant="10" id="S6l-1B-KIH"/>
+                                    <constraint firstItem="NiV-1V-79U" firstAttribute="leading" secondItem="nWk-Wn-679" secondAttribute="trailing" constant="30" id="a58-Ry-2bu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWk-Wn-679">
-                                <rect key="frame" x="66" y="400" width="80" height="30"/>
-                                <state key="normal" title="Find Me">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="mapFindMePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Iam-zS-IAd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
