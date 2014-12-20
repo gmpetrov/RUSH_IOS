@@ -20,7 +20,6 @@
 		437552891A45C62A005D5CB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437552871A45C62A005D5CB3 /* LaunchScreen.xib */; };
 		437552951A45C62A005D5CB3 /* Rush42Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437552941A45C62A005D5CB3 /* Rush42Tests.swift */; };
 		4375529F1A45CACD005D5CB3 /* wolf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4375529E1A45CACD005D5CB3 /* wolf.jpg */; };
-		43B60F201A45D4640023CD48 /* Anchor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B60F1F1A45D4640023CD48 /* Anchor@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,6 @@
 		437552931A45C62A005D5CB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437552941A45C62A005D5CB3 /* Rush42Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rush42Tests.swift; sourceTree = "<group>"; };
 		4375529E1A45CACD005D5CB3 /* wolf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wolf.jpg; sourceTree = "<group>"; };
-		43B60F1F1A45D4640023CD48 /* Anchor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anchor@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 				434B9EB21A46113300CD4E90 /* Top_Charts@2x.png */,
 				434B9EB01A4610EC00CD4E90 /* More@2x.png */,
 				43616C191A46052000D69D19 /* Map_Path@2x.png */,
-				43B60F1F1A45D4640023CD48 /* Anchor@2x.png */,
 				4375527C1A45C62A005D5CB3 /* AppDelegate.swift */,
 				4375529E1A45CACD005D5CB3 /* wolf.jpg */,
 				4375527E1A45C62A005D5CB3 /* FirstViewController.swift */,
@@ -224,7 +221,6 @@
 				434B9EB11A4610EC00CD4E90 /* More@2x.png in Resources */,
 				437552861A45C62A005D5CB3 /* Images.xcassets in Resources */,
 				434B9EB31A46113300CD4E90 /* Top_Charts@2x.png in Resources */,
-				43B60F201A45D4640023CD48 /* Anchor@2x.png in Resources */,
 				4375529F1A45CACD005D5CB3 /* wolf.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
