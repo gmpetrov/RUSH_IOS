@@ -85,24 +85,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="mapView" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OLF-wJ-yTH">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="-49" width="600" height="600"/>
                             </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NiV-1V-79U">
-                                <rect key="frame" x="199" y="467" width="238" height="29"/>
-                                <segments>
-                                    <segment title="Standard"/>
-                                    <segment title="Satellite"/>
-                                    <segment title="Hybrid"/>
-                                </segments>
-                                <connections>
-                                    <action selector="mapTypeSegmentPressed:" destination="8rJ-Kc-sve" eventType="valueChanged" id="eKX-wh-0Hk"/>
-                                </connections>
-                            </segmentedControl>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pl5-F2-zba">
+                                <rect key="frame" x="0.0" y="487" width="600" height="64"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NiV-1V-79U">
+                                        <rect key="frame" x="325" y="22" width="223" height="29"/>
+                                        <segments>
+                                            <segment title="Standard"/>
+                                            <segment title="Satellite"/>
+                                            <segment title="Hybrid"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="mapTypeSegmentPressed:" destination="8rJ-Kc-sve" eventType="valueChanged" id="eKX-wh-0Hk"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="NiV-1V-79U" secondAttribute="bottom" constant="12" id="4Pp-yq-3w3"/>
+                                    <constraint firstAttribute="trailing" secondItem="NiV-1V-79U" secondAttribute="trailing" constant="240" id="Hvb-mF-aZz"/>
+                                    <constraint firstItem="NiV-1V-79U" firstAttribute="top" secondItem="pl5-F2-zba" secondAttribute="top" constant="10" id="S6l-1B-KIH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="OLF-wJ-yTH" secondAttribute="centerY" id="NIn-c8-MnM"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="pl5-F2-zba" secondAttribute="bottom" id="hW5-Iy-kS0"/>
                             <constraint firstAttribute="centerX" secondItem="OLF-wJ-yTH" secondAttribute="centerX" id="lZk-J4-kiT"/>
+                            <constraint firstItem="pl5-F2-zba" firstAttribute="top" secondItem="OLF-wJ-yTH" secondAttribute="bottom" constant="-52" id="o7r-cj-IiG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Map_Path.png" id="cPa-gy-q4n"/>
