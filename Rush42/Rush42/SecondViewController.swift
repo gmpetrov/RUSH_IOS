@@ -34,11 +34,38 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+//        PIN ECOLE 42
         let annotation = MKPointAnnotation()
         annotation.setCoordinate(location)
         annotation.title = "Ecole 42"
         annotation.subtitle = "Pirate School"
         mapView.addAnnotation(annotation)
+        
+//        PIN FREE
+        let freeLocation = CLLocationCoordinate2D(latitude: 48.8716182, longitude: 2.3204795)
+        let pinFree = MKPointAnnotation()
+        pinFree.setCoordinate(freeLocation)
+        pinFree.title = "Free"
+        pinFree.subtitle = "Free HeadQuarter"
+        mapView.addAnnotation(pinFree)
+
+//        PIN HOME
+        
+        let homeLocation = CLLocationCoordinate2D(latitude: 48.8452139, longitude: 2.2973513)
+        let pinHome = MKPointAnnotation()
+        pinHome.setCoordinate(homeLocation)
+        pinHome.title = "Georges's Place"
+        pinHome.subtitle = "Lit douillet"
+        mapView.addAnnotation(pinHome)
+        
+//        PIN MEUF
+        
+        let meufLocation = CLLocationCoordinate2D(latitude: 48.8730678, longitude: 2.3710248)
+        let pinMeuf = MKPointAnnotation()
+        pinMeuf.setCoordinate(meufLocation)
+        pinMeuf.title = "Suzi's Place"
+        pinMeuf.subtitle = "Chez ma meuf"
+        mapView.addAnnotation(pinMeuf)
         
         mapView.delegate = self
         mapView.mapType = MKMapType.Standard

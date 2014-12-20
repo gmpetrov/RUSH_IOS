@@ -11,9 +11,9 @@ import UIKit
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet var tableView: UITableView!
-    
-    var items: [String] = ["Suzi's Place", "Georges's Place", "My School (42)"]
-    let icons = ["42icon.jpeg","42icon.jpeg","42icon.jpeg"]
+
+    var items: [String] = ["Suzi's Place", "Georges's Place", "My School (42)", "Free"]
+    let icons = ["42icon.jpeg","42icon.jpeg","42icon.jpeg","42icon.jpeg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
