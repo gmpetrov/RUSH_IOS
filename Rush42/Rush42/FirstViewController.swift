@@ -12,7 +12,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet var tableView: UITableView!
     
-    var items: [String] = ["Suzi's Place", "Georges's Place", "My School (42)"]
+    var items: [String] = ["Suzi's Place", "Georges's Place", "My School (42)", "Free"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
