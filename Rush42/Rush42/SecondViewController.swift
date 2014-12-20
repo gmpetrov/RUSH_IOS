@@ -43,7 +43,12 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         mapView.delegate = self
         mapView.mapType = MKMapType.Standard
         mapView.showsUserLocation = true
+        
+        let userLocation = MKUserLocation()
+        userLocation.setCoordinate(location);
+        mapView.addAnnotation(userLocation)
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
