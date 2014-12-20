@@ -9,30 +9,31 @@
 import UIKit
 import MapKit
 
-class SecondViewController: UIViewController, MKMapViewDelegate {
+class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
-    /*
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }*/
-    
     @IBOutlet weak var mapView: MKMapView!
+    var manager:CLLocationManager!
+    var myLocations: [CLLocation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 1
+        manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestAlwaysAuthorization()
+        manager.startUpdatingLocation()
         let location = CLLocationCoordinate2D(
             latitude: 48.896696,
             longitude: 2.318451
 
         )
-        // 2
+        let locationManager = CLLocationManager()
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
         
-        //3
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         let annotation = MKPointAnnotation()
         annotation.setCoordinate(location)
         annotation.title = "Ecole 42"
@@ -46,7 +47,6 @@ class SecondViewController: UIViewController, MKMapViewDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func mapTypeSegmentPressed(sender: AnyObject) {
