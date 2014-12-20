@@ -40,7 +40,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate {
         mapView.addAnnotation(annotation)
         
         mapView.delegate = self
-        mapView.mapType = MKMapType.Satellite
+        mapView.mapType = MKMapType.Standard
         mapView.showsUserLocation = true
     }
 
@@ -49,6 +49,19 @@ class SecondViewController: UIViewController, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func mapTypeSegmentPressed(sender: AnyObject) {
+        let segmentedControl = sender as UISegmentedControl
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = MKMapType.Standard
+        case 1:
+            mapView.mapType = MKMapType.Satellite
+        case 2:
+            mapView.mapType = MKMapType.Hybrid
+        default:
+            mapView.mapType = mapView.mapType
+        }
+    }
 
 }
 
