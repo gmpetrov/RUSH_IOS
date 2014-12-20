@@ -12,8 +12,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet var tableView: UITableView!
 
-    var items: [String] = ["Suzi's Place", "Georges's Place", "My School (42)", "Free"]
-    let icons = ["42icon.jpeg","42icon.jpeg","42icon.jpeg","42icon.jpeg"]
+    var items: [String] = ["Suzy", "Georges", "My School (42)", "Free"]
+    let icons = ["female.png","male.png","42icon.jpeg","free.png"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         
         cell.textLabel.text = self.items[indexPath.row]
-        
         
         var imageName = UIImage(named: icons[indexPath.row])
         cell.imageView.image = imageName
