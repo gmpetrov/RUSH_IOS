@@ -28,7 +28,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
 
         )
         let locationManager = CLLocationManager()
-        let span = MKCoordinateSpanMake(0.01, 0.01)
+        let span = MKCoordinateSpanMake(0.1, 0.1)
         let region = MKCoordinateRegion(center: location, span: span)
         mapView.setRegion(region, animated: true)
         
@@ -61,6 +61,20 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         default:
             mapView.mapType = mapView.mapType
         }
+    }
+    
+    @IBAction func mapFindMePressed(sender: AnyObject){
+        
+        let location = CLLocationCoordinate2D(
+            latitude: 48.896696,
+            longitude: 2.318451
+            
+        )
+        let locationManager = CLLocationManager()
+        let span = MKCoordinateSpanMake(0.01, 0.01)
+        let region = MKCoordinateRegion(center: location, span: span)
+        mapView.setRegion(region, animated: true)
+        
     }
 
 }
